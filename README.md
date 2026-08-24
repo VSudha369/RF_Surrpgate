@@ -12,53 +12,52 @@ Canonical data flow:
 
 ## Implemented phases
 
-- `phase0/` — Google Colab hardware/runtime autotuning, canonical version `v1.0.1`.
-- `phase1/` — dataset canonicalization and storage pipeline, canonical version `v1.0.0`.
+- `phase0/` — Colab hardware/runtime autotuning; canonical version `v1.0.1`, frozen.
+- `phase1/` — dataset canonicalization/storage; RadioML canonicalization plus native WiSig ManyTx support through `v1.0.2`, frozen.
+- `phase2/` — local stage manager for frozen Phase-1 transport artifacts; canonical version `v1.0.0`.
 
 ### Phase 0
 
-Run on a Colab GPU runtime:
+Canonical T4 result is frozen as `GPU_AUTOTUNE_COMPLETE`: FP16 autocast + GradScaler, scientific evaluation FP32, `torch.compile` disabled.
 
-```python
-!rm -rf /content/RF_Surrpgate
-!git clone https://github.com/VSudha369/RF_Surrpgate.git /content/RF_Surrpgate
-%cd /content/RF_Surrpgate/phase0
-%run Phase0_Colab_Runtime_Autotune_v1_0_1.py
-```
+### Phase 1 — frozen canonical datasets
 
-Expected T4 gate:
+| Dataset | Samples | Native L | Shards | Transport packs |
+|---|---:|---:|---:|---:|
+| WiSig ManyTx | 1,020,643 | 256 | 127 | 1 |
+| RadioML 2016.10A | 220,000 | 128 | 4 | 1 |
+| RadioML 2018.01A | 2,555,904 | 1024 | 157 | 10 |
 
-```text
-GPU_AUTOTUNE_COMPLETE
-float16
-GradScaler=True
-```
+Phase 1 preserves RF values and native sequence lengths. It standardizes storage only to float32 `[N,2,L]` and persists verified large TAR transport packs to Drive.
 
-### Phase 1
+The native WiSig source is `ManyTx.pkl.zip`; the older derived `WiSig_tensors.h5` at length 128 is not the canonical source for this pipeline.
 
-Recommended runtime: CPU / High-RAM. GPU is not required.
+### Phase 2 — Local Stage Manager
+
+Mount Drive from a Colab notebook cell, update the repository, then validate the frozen Phase-1 targets:
 
 ```python
 from google.colab import drive
 drive.mount('/content/drive', force_remount=False)
 
-!rm -rf /content/RF_Surrpgate
-!git clone https://github.com/VSudha369/RF_Surrpgate.git /content/RF_Surrpgate
-%cd /content/RF_Surrpgate/phase1
+%cd /content/RF_Surrpgate
+!git pull origin main
+%cd /content/RF_Surrpgate/phase2
 
-!python Phase1_Dataset_Canonicalization_v1_0_0.py --discover
-!python Phase1_Dataset_Canonicalization_v1_0_0.py --write-config-template /content/phase1_config.json
+!python Phase2_Local_Stage_Manager_v1_0_0.py validate-drive --dataset all
 ```
 
-Verify/edit `/content/phase1_config.json`, then canonicalize datasets incrementally:
+Perform the first full real-artifact smoke test with RadioML 2016:
 
 ```python
-!python Phase1_Dataset_Canonicalization_v1_0_0.py --config /content/phase1_config.json --dataset wisig
-!python Phase1_Dataset_Canonicalization_v1_0_0.py --config /content/phase1_config.json --dataset radioml2018
-!python Phase1_Dataset_Canonicalization_v1_0_0.py --config /content/phase1_config.json --dataset radioml2016
+!python Phase2_Local_Stage_Manager_v1_0_0.py stage-in \
+    --dataset radioml2016 --verification full
+
+!python Phase2_Local_Stage_Manager_v1_0_0.py resolve \
+    --dataset radioml2016
 ```
 
-Phase 1 preserves RF values and native sequence lengths. It standardizes only storage layout/dtype to `[N,2,L]` float32 and writes large verified TAR transport packs to Drive instead of thousands of loose bulk files.
+Phase 2 freezes exact Phase-1 run IDs, source hashes, transport-pack names, byte sizes, and SHA-256 values. Stage-in copies each pack to `/content`, hashes it during copy, rejects unsafe or unexpected TAR members, extracts locally, verifies canonical shard hashes/layout/counts/global IDs, writes `LOCAL_STAGE_COMPLETE.json`, and exposes a stable local canonical root to downstream phases.
 
 ## Persistent paths
 
@@ -70,6 +69,10 @@ Local hot workspace:
 
 `/content/surrogate_xai_v2/`
 
+Phase-2 staged datasets:
+
+`/content/surrogate_xai_v2/staged_datasets/`
+
 ## Reproducibility
 
-Datasets, generated shards, caches, checkpoints, Drive artifacts, and local runtime outputs are intentionally excluded from Git. Each scientific stage writes configuration, provenance, hashes, metrics, and completion manifests before persistence.
+Datasets, generated shards, caches, checkpoints, Drive artifacts, and local runtime outputs are intentionally excluded from Git. Each scientific stage records configuration, provenance, hashes, validation results, and completion markers before downstream use.
