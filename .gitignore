@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local/runtime outputs
+outputs/
+logs/
+cache/
+checkpoints/
+artifacts/
+runs/
+*.partial
+
+# Scientific data / generated shards
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.parquet
+*.tar
+*.tar.gz
+*.tgz
+*.zst
+*.zip
+
+# Colab/local workspace mirrors
+surrogate_xai_v2/
+/content/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
