@@ -1,0 +1,8 @@
+{
+  "version": "1.0.1",
+  "status": "PASS",
+  "bugfix": "Drive mount is performed only in the Colab notebook kernel; subprocess entrypoint verifies /content/drive/MyDrive instead of calling google.colab.drive.mount().",
+  "scientific_logic": "unchanged from validated v1.0.0 base implementation",
+  "canonical_entrypoint": "Phase1_Dataset_Canonicalization_v1_0_1.py",
+  "canonical_colab_launcher": "Phase1_Dataset_Canonicalization_v1_0_1.ipynb"
+}
