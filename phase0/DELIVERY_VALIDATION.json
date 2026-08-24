@@ -1,0 +1,22 @@
+{
+  "version": "1.0.1",
+  "repository": "VSudha369/RF_Surrpgate",
+  "canonical_files": [
+    "phase0/Phase0_Colab_Runtime_Autotune_v1_0_1.py",
+    "phase0/Phase0_Colab_Runtime_Autotune_v1_0_1.ipynb",
+    "phase0/README.md"
+  ],
+  "critical_policies": {
+    "tesla_t4": "FP16 autocast + GradScaler",
+    "drive_role": "persistent storage only",
+    "hot_io_root": "/content/surrogate_xai_v2/",
+    "phase1_gate": "GPU_AUTOTUNE_COMPLETE"
+  },
+  "push_commits": {
+    "repository_init": "6db3b78cc04ee7b4f20cb5e632b9ab8a22669fa3",
+    "gitignore": "b2eb6a43c4873bf9ad315d56848164663907ac1b",
+    "phase0_readme": "6ac702aff7d10ba92a6b6fb45b863693196b4dc6",
+    "phase0_python": "7de1bdb1ce237af10657cf1cce98a7e4b2ea946f",
+    "phase0_notebook": "09b0925364c47250d9daf8d9c993a16304c10549"
+  }
+}
