@@ -1,0 +1,71 @@
+{
+  "phase4_benchmark_version": "1.1.0",
+  "profile": "benchmark",
+  "scientific_purpose": "Resource-bounded paired objective benchmark; not final teacher selection",
+  "seeds": [42, 123, 2026],
+  "arms": {
+    "A0": "CE",
+    "A1": "CE + 0.1 SupCon"
+  },
+  "training": {
+    "train_samples_per_known_transmitter": 600,
+    "train_samples_total": 58800,
+    "batch_size": 256,
+    "samples_per_transmitter_per_batch": 4,
+    "maximum_epochs": 8,
+    "minimum_epochs": 4,
+    "early_stopping_patience": 2,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "maximum_optimizer_steps": 11040
+  },
+  "selection": {
+    "role": "p0_known",
+    "samples_per_known_transmitter": 150,
+    "samples_total": 14700,
+    "primary_metric": "fixed98_macro_f1",
+    "practical_a1_minus_a0_delta": 0.002,
+    "minimum_a1_seed_wins": 2,
+    "require_p0_fisher_nonregression": true
+  },
+  "post_selection_evaluation": {
+    "known_shift_roles": [
+      "p1_cross_day",
+      "p2_cross_receiver",
+      "p3_cross_day_receiver"
+    ],
+    "samples_per_present_transmitter": 150,
+    "calibration_unknown_limit": 5000,
+    "may_change_selected_arm": false
+  },
+  "access_policy": {
+    "train_known": "gradient-bearing",
+    "p0_known": "model selection only",
+    "p1_cross_day": "resolved only after selection lock",
+    "p2_cross_receiver": "resolved only after selection lock",
+    "p3_cross_day_receiver": "resolved only after selection lock",
+    "calibration_unknown": "resolved after selection lock; diagnostics only",
+    "strict_zero_day": "structurally forbidden",
+    "strict_zero_day_shift": "structurally forbidden",
+    "strict_unknown": "structurally forbidden"
+  },
+  "recovery": {
+    "cadence": "after every fully completed paired-arm epoch",
+    "drive_is_persistence_only": true,
+    "restore_requires_sha256": true,
+    "saved_state": [
+      "model",
+      "prototype_bank",
+      "optimizer",
+      "scheduler",
+      "grad_scaler",
+      "epoch",
+      "early_stop_state",
+      "best_state",
+      "history",
+      "rng_states",
+      "config_hash",
+      "exposure_hash"
+    ]
+  }
+}

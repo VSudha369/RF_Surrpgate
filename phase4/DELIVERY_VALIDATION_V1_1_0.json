@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "arms_a0_a1_only": "PASS",
+    "balanced_train_count_58800": "PASS",
+    "calibration_unknown_post_selection_only": "PASS",
+    "complete_resume_state": "PASS",
+    "component_losses_recorded": "PASS",
+    "config_json_parse": "PASS",
+    "drive_not_scientific_hot_path": "PASS",
+    "failure_traceback_persistence": "PASS",
+    "file_present::Phase4_WiSig_Benchmark_v1_1_0_Colab.ipynb": "PASS",
+    "file_present::Phase4_WiSig_Teacher_Representation_Benchmark_v1_1_0.py": "PASS",
+    "file_present::README_V1_1_0.md": "PASS",
+    "file_present::SCIENTIFIC_PROTOCOL_V1_1_0.md": "PASS",
+    "file_present::phase4_benchmark_config_v1_1_0.json": "PASS",
+    "file_present::phase4_benchmark_runner_v1_1_0.py": "PASS",
+    "file_present::phase4_benchmark_runtime_v1_1_0.py": "PASS",
+    "file_present::phase4_benchmark_training_v1_1_0.py": "PASS",
+    "maximum_epochs_eight": "PASS",
+    "maximum_optimizer_steps_11040": "PASS",
+    "notebook_json_parse": "PASS",
+    "p0_count_14700": "PASS",
+    "p0_only_training_evaluation": "PASS",
+    "python_ast_parse": "PASS",
+    "selection_persisted_before_shift_resolution": "PASS",
+    "strict_self_test_present": "PASS",
+    "training_module_has_no_shift_or_unknown_role": "PASS"
+  },
+  "overall": "PASS",
+  "phase4_benchmark_version": "1.1.0",
+  "source_sha256": {
+    "Phase4_WiSig_Benchmark_v1_1_0_Colab.ipynb": "e3a9c73635b0b851b726fe810a9a61c0db8de802a54cf0e1b7bffad71cf0bd09",
+    "Phase4_WiSig_Teacher_Representation_Benchmark_v1_1_0.py": "912a77e7aedfe96e3868ce5b7602275e28e049cb832a4cbf3f5f31792556d785",
+    "README_V1_1_0.md": "42b4a5c75dae5e409f5143d916b8c9dc18c4998647977b2e644b8808b590e1da",
+    "SCIENTIFIC_PROTOCOL_V1_1_0.md": "e8871263c1d5b16f08894c2907e027cf5872557d4a9f6a951fd6682da1e28041",
+    "phase4_benchmark_config_v1_1_0.json": "4402df1525a797dc65e00bc1f76740764ffae8f927b6c0d00ccb6f9d238c19ef",
+    "phase4_benchmark_runner_v1_1_0.py": "9555bd2227760b0351e376a3fd1f4a34750393c53166e08542980bf5c2341248",
+    "phase4_benchmark_runtime_v1_1_0.py": "97077179df974962fc47d76864ae76ef71a3f9566c6575c5c980f46b287c2432",
+    "phase4_benchmark_training_v1_1_0.py": "4bf2d251a2b7f4b66b776c420c2a080303bcd15cd615b18ac3a486eb35f87847"
+  },
+  "validation_scope": "Static source/config/notebook/protocol validation. CUDA execution and dataset-dependent tests must run in Colab T4."
+}
