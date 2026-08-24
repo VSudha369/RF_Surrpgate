@@ -1,0 +1,31 @@
+{
+  "version": "1.0.2",
+  "python_syntax": "PASS",
+  "notebook_parse": "PASS",
+  "synthetic_manytx_native_adapter": "PASS",
+  "hard_native_wisig_invariants": {
+    "n_samples": 1020643,
+    "sequence_length": 256,
+    "tx_count": 150,
+    "receiver_count": 18,
+    "capture_date_count": 4,
+    "equalization_count": 2,
+    "nonempty_cells": 20759,
+    "empty_cells": 841,
+    "source_orientation": "N,L,IQ"
+  },
+  "scientific_contract": {
+    "native_length_preserved": true,
+    "signal_transform": "layout_dtype_only",
+    "metadata_axes_preserved": true,
+    "session_fabrication_forbidden": true,
+    "drive_hot_loop_forbidden": true
+  },
+  "source_sha256": {
+    "Phase1_Dataset_Canonicalization_v1_0_2.py": "dc0345f79c09fdaf2a0c2cf524c3344bf0760577622599e7fda36df9e1aeb58e",
+    "Phase1_Dataset_Canonicalization_v1_0_2.ipynb": "7b7ca33bb3583e38e030e9ad640491e0f6dbc9cf5ac293b0b1f58b0ad3f8181a",
+    "wisig_manytx_adapter.py": "a6c09a0c1d606312ab5fb4ecb570f094d81bcd199fe4959d196a158eb4c940b4",
+    "phase1_config_v1_0_2_template.json": "af931546a9b18b8c504b610085c1a3e2ef4825cf2476f4725da76e46fef7c204",
+    "README_v1_0_2.md": "e3d6e0b341e819fdc62c5b0936dad4898fd5f188af45763e92e660066e98565c"
+  }
+}
