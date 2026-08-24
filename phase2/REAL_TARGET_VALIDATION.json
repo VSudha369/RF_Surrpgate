@@ -1,0 +1,95 @@
+{
+  "phase2_version": "1.0.0",
+  "validation_basis": "Actual frozen Phase-1 Drive transport manifests captured on 2026-08-24",
+  "bulk_pack_copy_executed_in_build_environment": false,
+  "manifest_contract_validation": "PASS",
+  "targets": {
+    "radioml2016": {
+      "drive_run_id": "20260824T073604Z",
+      "drive_folder_id": "1FBuSSgLeTPcsMk8IoAFPlOde3iAv3ki2",
+      "transport_folder_id": "1c6ggUa-FqiB4Yicw5cad-fUR4SVLmmKp",
+      "n_packs": 1,
+      "total_transport_bytes": 228392960,
+      "packs": [
+        {
+          "filename": "pack_0000.tar",
+          "bytes": 228392960,
+          "sha256": "a053da10c71c993c3d7237761eee28aec4ad587efe10a523199d489fbfd15dc6"
+        }
+      ]
+    },
+    "radioml2018": {
+      "drive_run_id": "20260824T073812Z",
+      "drive_folder_id": "1zbsNgY6OBZPyXbqSbn1GnPINlEXVwpg-",
+      "transport_folder_id": "1mdo8U3Z64pSqkkvHTsUg0Ss-pmz2TU80",
+      "n_packs": 10,
+      "total_transport_bytes": 20974643200,
+      "packs": [
+        {
+          "filename": "pack_0000.tar",
+          "bytes": 2046126080,
+          "sha256": "0f568202f373e8fb866e558bd2a62c47a46ca763dd10c0381c1bb3e5dd61d081"
+        },
+        {
+          "filename": "pack_0001.tar",
+          "bytes": 2143856640,
+          "sha256": "1f9dc5c81f29405d707b1029170118223181624133cc99209ea3e92f116b1b5f"
+        },
+        {
+          "filename": "pack_0002.tar",
+          "bytes": 2143856640,
+          "sha256": "9aa55dbe630359e61665edde66e21c22d235be63e8e87380281809c662222d59"
+        },
+        {
+          "filename": "pack_0003.tar",
+          "bytes": 2143856640,
+          "sha256": "50a0aa1bf9b6ddd64a6be5865cd6d4e01ff90eefa3fd5c8fa74e8a6d7f95b378"
+        },
+        {
+          "filename": "pack_0004.tar",
+          "bytes": 2143856640,
+          "sha256": "dc8cf389f5221a847a0cb92af477f30a81f952815cff071dcbc5998833d23746"
+        },
+        {
+          "filename": "pack_0005.tar",
+          "bytes": 2143856640,
+          "sha256": "252cb5bf1528cfc8b22fdfaa977520b062e142875ad3b59096e8cb0d9f050b30"
+        },
+        {
+          "filename": "pack_0006.tar",
+          "bytes": 2143856640,
+          "sha256": "a45249aeecabc40b4671a760123a6c481df0538ce02ee8b9d5b06a81a91300e8"
+        },
+        {
+          "filename": "pack_0007.tar",
+          "bytes": 2143856640,
+          "sha256": "084802958af10272ec82e973d7fed814f4d278f7dc1999e93b4560080a5102e2"
+        },
+        {
+          "filename": "pack_0008.tar",
+          "bytes": 2143856640,
+          "sha256": "0a8ee72b9a3788a5aacce028fc03133e1f2963ac07cb19e2d37100d721f011bf"
+        },
+        {
+          "filename": "pack_0009.tar",
+          "bytes": 1777664000,
+          "sha256": "d3e6c8658326b7221745b4e356365c58ca31d5146a9849aa1c740cbbc2c59693"
+        }
+      ]
+    },
+    "wisig": {
+      "drive_run_id": "20260824T082742Z",
+      "drive_folder_id": "1FbyjDgfFZZySsHneN601Cs88OOyHhJIB",
+      "transport_folder_id": "1Fn8QTJewhb3eGbTb8LzDpw9gATtCY_NG",
+      "n_packs": 1,
+      "total_transport_bytes": 2122823680,
+      "packs": [
+        {
+          "filename": "pack_0000.tar",
+          "bytes": 2122823680,
+          "sha256": "afd7e631596243de60e91671da1c99ac4dd6633664a73907002252e70723ee0f"
+        }
+      ]
+    }
+  }
+}
