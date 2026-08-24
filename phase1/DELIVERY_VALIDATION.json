@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "python_syntax": "PASS",
+  "notebook_parse": "PASS",
+  "synthetic_adapter_tests": {
+    "radioml2016_native_L128": "PASS",
+    "radioml2018_native_L1024": "PASS",
+    "wisig_generic_hdf5_L256": "PASS"
+  },
+  "scientific_invariants": {
+    "canonical_layout": "[N,2,L]",
+    "canonical_dtype": "float32",
+    "native_length_preserved": true,
+    "signal_value_transform": "layout_dtype_only",
+    "no_dc_rms_normalization": true,
+    "drive_hot_loop_forbidden": true,
+    "transport_tar_safe_extraction": true,
+    "sha256_stage_in_and_stage_out": true,
+    "phase0_gpu_status_gate": true
+  },
+  "source_sha256": {
+    "Phase1_Dataset_Canonicalization_v1_0_0.py": "79b7777d80bc756736c99176621762bb1d2615b01f67cd34316dc5cfa82fdf9f",
+    "Phase1_Dataset_Canonicalization_v1_0_0.ipynb": "650ce95e15201ab1255ed343e60a2b868ea6b95b93cee1848096b2f0c200d956",
+    "storage_contract.py": "49dfbb49590e3be1cf4db9c5fa3bb180b9f97420ae80507badb461f1b01a94bb",
+    "dataset_adapters.py": "ed06b0b30e600c2e752a3a354747ff681cda5ff172488c87243ec80a682401c1",
+    "phase1_config_template.json": "2fbbd9c7a4ecf8d6aceb08054b18bb60b97d477c58a26ffa4a01d424c585c5c9",
+    "README.md": "ae957f27701c6b72b6d393302102c56fd89d2bd92866c35842105c73b697c168"
+  }
+}
