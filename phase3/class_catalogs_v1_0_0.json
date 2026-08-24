@@ -1,0 +1,179 @@
+{
+  "version": "1.0.0",
+  "seed": 20260824,
+  "algorithm": "family_capacity_largest_remainder_v1 + sha256 deterministic class ranking",
+  "datasets": {
+    "radioml2016": {
+      "classes": [
+        "8PSK",
+        "AM-DSB",
+        "AM-SSB",
+        "BPSK",
+        "CPFSK",
+        "GFSK",
+        "PAM4",
+        "QAM16",
+        "QAM64",
+        "QPSK",
+        "WBFM"
+      ],
+      "snrs": [
+        -20,
+        -18,
+        -16,
+        -14,
+        -12,
+        -10,
+        -8,
+        -6,
+        -4,
+        -2,
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "families": {
+        "PSK": [
+          "8PSK",
+          "BPSK",
+          "QPSK"
+        ],
+        "AM": [
+          "AM-DSB",
+          "AM-SSB"
+        ],
+        "FSK": [
+          "CPFSK",
+          "GFSK"
+        ],
+        "PAM": [
+          "PAM4"
+        ],
+        "QAM": [
+          "QAM16",
+          "QAM64"
+        ],
+        "FM": [
+          "WBFM"
+        ]
+      },
+      "known_count": 7,
+      "calibration_unknown_count": 2,
+      "strict_unknown_count": 2,
+      "samples_per_class_snr": 1000,
+      "expected_n_samples": 220000,
+      "expected_seq_len": 128,
+      "source_sha256": "b29ccc25b00d0718cd3b70ffa9158662ec83f6d9b63ffd845c7bcbe3b3096e8c"
+    },
+    "radioml2018": {
+      "classes": [
+        "OOK",
+        "4ASK",
+        "8ASK",
+        "BPSK",
+        "QPSK",
+        "8PSK",
+        "16PSK",
+        "32PSK",
+        "16APSK",
+        "32APSK",
+        "64APSK",
+        "128APSK",
+        "16QAM",
+        "32QAM",
+        "64QAM",
+        "128QAM",
+        "256QAM",
+        "AM-SSB-WC",
+        "AM-SSB-SC",
+        "AM-DSB-WC",
+        "AM-DSB-SC",
+        "FM",
+        "GMSK",
+        "OQPSK"
+      ],
+      "snrs": [
+        -20,
+        -18,
+        -16,
+        -14,
+        -12,
+        -10,
+        -8,
+        -6,
+        -4,
+        -2,
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30
+      ],
+      "families": {
+        "ASK": [
+          "OOK",
+          "4ASK",
+          "8ASK"
+        ],
+        "PSK": [
+          "BPSK",
+          "QPSK",
+          "8PSK",
+          "16PSK",
+          "32PSK",
+          "OQPSK"
+        ],
+        "APSK": [
+          "16APSK",
+          "32APSK",
+          "64APSK",
+          "128APSK"
+        ],
+        "QAM": [
+          "16QAM",
+          "32QAM",
+          "64QAM",
+          "128QAM",
+          "256QAM"
+        ],
+        "AM": [
+          "AM-SSB-WC",
+          "AM-SSB-SC",
+          "AM-DSB-WC",
+          "AM-DSB-SC"
+        ],
+        "FM": [
+          "FM"
+        ],
+        "GMSK": [
+          "GMSK"
+        ]
+      },
+      "known_count": 16,
+      "calibration_unknown_count": 4,
+      "strict_unknown_count": 4,
+      "samples_per_class_snr": 4096,
+      "expected_n_samples": 2555904,
+      "expected_seq_len": 1024,
+      "source_sha256": "e3dd0bef66a3426959ee66a1709a8c0a95d4f8395d18aaf6f1214bdbc763bd38"
+    }
+  }
+}

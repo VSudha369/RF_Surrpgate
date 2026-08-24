@@ -1,0 +1,9 @@
+{
+  "status": "NOT_LOCKED",
+  "teacher_frozen": false,
+  "surrogate_frozen": false,
+  "open_set_threshold_frozen": false,
+  "fidelity_gate_frozen": false,
+  "strict_access_authorized": false,
+  "final_config_sha256": ""
+}

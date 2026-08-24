@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "seed": 20260824,
+  "datasets": {
+    "radioml2016": {
+      "family_unknown_allocation": {
+        "PSK": 1,
+        "AM": 1,
+        "FSK": 1,
+        "PAM": 0,
+        "QAM": 1,
+        "FM": 0
+      },
+      "known": [
+        "8PSK",
+        "AM-SSB",
+        "GFSK",
+        "PAM4",
+        "QAM16",
+        "QPSK",
+        "WBFM"
+      ],
+      "calibration_unknown": [
+        "AM-DSB",
+        "QAM64"
+      ],
+      "strict_unknown": [
+        "BPSK",
+        "CPFSK"
+      ]
+    },
+    "radioml2018": {
+      "family_unknown_allocation": {
+        "ASK": 1,
+        "PSK": 2,
+        "APSK": 1,
+        "QAM": 2,
+        "AM": 2,
+        "FM": 0,
+        "GMSK": 0
+      },
+      "known": [
+        "4ASK",
+        "8ASK",
+        "8PSK",
+        "16PSK",
+        "32PSK",
+        "16APSK",
+        "32APSK",
+        "128APSK",
+        "16QAM",
+        "32QAM",
+        "128QAM",
+        "AM-DSB-WC",
+        "AM-DSB-SC",
+        "FM",
+        "GMSK",
+        "OQPSK"
+      ],
+      "calibration_unknown": [
+        "OOK",
+        "QPSK",
+        "64QAM",
+        "AM-SSB-WC"
+      ],
+      "strict_unknown": [
+        "BPSK",
+        "64APSK",
+        "256QAM",
+        "AM-SSB-SC"
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "python_syntax": "PASS",
+  "notebook_parse": "PASS",
+  "radioml_class_role_regeneration": "PASS",
+  "radioml2016_real_frozen_artifact_test": "PASS",
+  "radioml2016_repeat_determinism": "PASS",
+  "radioml2018_full_count_structural_test": "PASS",
+  "wisig_real_historical_split_hash_validation": "PASS",
+  "wisig_identity_bridge_98_22_30": "PASS",
+  "wisig_identity_partition_covers_all_150": "PASS",
+  "wisig_p2_p3_coverage_crosscheck": "PASS",
+  "strict_index_non_export": "PASS",
+  "strict_access_guard_default_locked": "PASS",
+  "scientific_contract": {
+    "signals_rewritten": false,
+    "unknown_gradients_forbidden": true,
+    "strict_indices_exported": false,
+    "radioml_known_split_stratification": "class_x_snr",
+    "radio_class_allocation": "deterministic_family_stratified",
+    "wisig_protocol": "historical frozen benchmark bridge by identical source SHA256"
+  },
+  "source_sha256": {
+    "FINAL_SELECTION_LOCK_TEMPLATE.json": "1b82b4bffb0854e5ea1fc50b2d32c37a129b94884273b3a99616caac7e5d39fa",
+    "PROVENANCE_VALIDATION.json": "dcedb229eb5e62ab12f1546b8493e0903aa389079ce21d3ed72913c9a747dcca",
+    "Phase3_Frozen_OpenSet_Splits_v1_0_0.ipynb": "e77c9292e194f530444b626c7c8a1e4281d2486b211c15ba071425e336df381a",
+    "Phase3_Frozen_OpenSet_Splits_v1_0_0.py": "6387ddda61bc7602b784bcb8ac42d710618173d77fa8c4d3110c78af4c669cbb",
+    "README.md": "342331e54a42b7d48bc2a8bf2fb8aecd0b21783f515e95854a7439558e99921f",
+    "REAL_DATA_VALIDATION.json": "4ba0aad5cd8af9b763fe7b2fa7088dd97555427c12047a5b238389d24c4f325c",
+    "class_catalogs_v1_0_0.json": "63bb7391303d248f6c03e07eaf96acb12bf5627a8d477e943e982af2c2a804ee",
+    "frozen_class_roles_v1_0_0.json": "d354e6d70b821fb2b9e3c9c0dd7b12cf4bf3b41eef8525c1c04684dcc2c32ad1",
+    "radioml_open_set.py": "0f46780575f2a755eeeea892b799bad9a6868b36b98d72216fc1b6d8dde7ecec",
+    "split_common.py": "5fc503d81b498c35ef9dd0de39f3509cf177fd823401ab2a627586017e4f8665",
+    "strict_access_guard.py": "142aff38ddf409ef5953aa6d7751fc8b7737cea15e279abc5b60900f19b0c897",
+    "wisig_frozen_protocol_registry_v1_0_0.json": "b63baf2a52169a2affac4003202d01f71c7c1b75d3df9305cb47e1cb74c7c6da",
+    "wisig_protocol_bridge.py": "9f877bb0568881db3216b857ae38efc90630919bdff161f21b4dfbd65d0fdea4"
+  }
+}

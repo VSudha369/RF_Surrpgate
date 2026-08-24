@@ -1,0 +1,51 @@
+{
+  "rml16_real": {
+    "verified": true,
+    "dataset": "radioml2016",
+    "counts": {
+      "known_train": 98000,
+      "known_val": 21000,
+      "known_test": 21000,
+      "calibration_unknown": 40000,
+      "strict_unknown": 40000
+    },
+    "universe_count": 220000,
+    "pairwise_disjoint": true,
+    "class_roles_regenerate_exactly": true,
+    "stratification": "class_x_snr",
+    "strict_index_exported": false
+  },
+  "wisig_real": {
+    "verified": true,
+    "dataset": "wisig",
+    "identity_counts": {
+      "known": 98,
+      "calibration_unknown": 22,
+      "strict_zero_day": 30
+    },
+    "allowed_counts": {
+      "train_known": 388139,
+      "p0_known": 68495,
+      "p1_cross_day": 153529,
+      "p2_cross_receiver": 27088,
+      "p3_cross_day_receiver": 8992,
+      "calibration_unknown": 158400
+    },
+    "strict_counts": {
+      "strict_zero_day": 216000,
+      "strict_zero_day_shift": 3000
+    },
+    "allowed_pairwise_disjoint": true,
+    "strict_files_hash_only_not_loaded": true,
+    "p2_missing_known_identities": [
+      "18-2"
+    ],
+    "p3_missing_known_identities": [
+      "11-17",
+      "12-1",
+      "13-18",
+      "18-1",
+      "18-2"
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "phase3_version": "1.0.0",
+  "wisig_bridge": {
+    "source_archive_sha256": "a8fc3e35134a240bfb4dab8862a6e482cef44de000b813d42417b853c47ccc7e",
+    "historical_branch": "MANYTX_ZERO_DAY_BRANCH_v1.0.3",
+    "partition_seed": 20260808,
+    "identity_reconstruction_validation": "PASS",
+    "identity_partition_counts": {
+      "known": 98,
+      "calibration_unknown": 22,
+      "strict_zero_day": 30
+    },
+    "identity_partition_covers_all_150_source_transmitters": true,
+    "historical_split_hash_manifest_crosscheck": "PASS",
+    "p2_missing_known_identities": [
+      "18-2"
+    ],
+    "p3_missing_known_identities": [
+      "11-17",
+      "12-1",
+      "13-18",
+      "18-1",
+      "18-2"
+    ],
+    "strict_runtime_behavior": "hash-only; no np.load; no normal output copy"
+  },
+  "radioml2016_real_target": {
+    "canonical_source": "actual frozen Phase-1 RML16 pack_0000.tar",
+    "n_samples": 220000,
+    "seq_len": 128,
+    "result": "PASS",
+    "counts": {
+      "known_train": 98000,
+      "known_val": 21000,
+      "known_test": 21000,
+      "calibration_unknown": 40000,
+      "strict_unknown": 40000
+    },
+    "deterministic_repeat_hash_check": "PASS"
+  },
+  "radioml2018_structural_target": {
+    "full_expected_n_samples": 2555904,
+    "seq_len": 1024,
+    "result": "PASS",
+    "counts": {
+      "known_train": 1192672,
+      "known_val": 255424,
+      "known_test": 255840,
+      "calibration_unknown": 425984,
+      "strict_unknown": 425984
+    },
+    "real_pack_stage_required_before real Phase-3 RML18 execution": true
+  }
+}
