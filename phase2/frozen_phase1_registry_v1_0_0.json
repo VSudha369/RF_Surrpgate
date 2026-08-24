@@ -1,0 +1,107 @@
+{
+  "registry_version": "1.0.0",
+  "project": "Surrogate_XAI_V2",
+  "drive_phase1_root": "/content/drive/MyDrive/Surrogate_XAI_V2/01_PHASE1_DATASET_CANONICALIZATION",
+  "local_stage_root": "/content/surrogate_xai_v2/staged_datasets",
+  "datasets": {
+    "wisig": {
+      "phase1_run_id": "20260824T082742Z",
+      "phase1_version": "1.0.2",
+      "drive_dataset_root": "/content/drive/MyDrive/Surrogate_XAI_V2/01_PHASE1_DATASET_CANONICALIZATION/run_20260824T082742Z/wisig",
+      "source_sha256": "a8fc3e35134a240bfb4dab8862a6e482cef44de000b813d42417b853c47ccc7e",
+      "n_samples": 1020643,
+      "seq_len": 256,
+      "n_shards": 127,
+      "n_transport_packs": 1,
+      "expected_unique_label_count": 150,
+      "packs": [
+        {
+          "filename": "pack_0000.tar",
+          "bytes": 2122823680,
+          "sha256": "afd7e631596243de60e91671da1c99ac4dd6633664a73907002252e70723ee0f"
+        }
+      ]
+    },
+    "radioml2016": {
+      "phase1_run_id": "20260824T073604Z",
+      "phase1_version": "1.0.1",
+      "drive_dataset_root": "/content/drive/MyDrive/Surrogate_XAI_V2/01_PHASE1_DATASET_CANONICALIZATION/run_20260824T073604Z/radioml2016",
+      "source_sha256": "b29ccc25b00d0718cd3b70ffa9158662ec83f6d9b63ffd845c7bcbe3b3096e8c",
+      "n_samples": 220000,
+      "seq_len": 128,
+      "n_shards": 4,
+      "n_transport_packs": 1,
+      "expected_unique_label_count": 11,
+      "packs": [
+        {
+          "filename": "pack_0000.tar",
+          "bytes": 228392960,
+          "sha256": "a053da10c71c993c3d7237761eee28aec4ad587efe10a523199d489fbfd15dc6"
+        }
+      ]
+    },
+    "radioml2018": {
+      "phase1_run_id": "20260824T073812Z",
+      "phase1_version": "1.0.1",
+      "drive_dataset_root": "/content/drive/MyDrive/Surrogate_XAI_V2/01_PHASE1_DATASET_CANONICALIZATION/run_20260824T073812Z/radioml2018",
+      "source_sha256": "e3dd0bef66a3426959ee66a1709a8c0a95d4f8395d18aaf6f1214bdbc763bd38",
+      "n_samples": 2555904,
+      "seq_len": 1024,
+      "n_shards": 157,
+      "n_transport_packs": 10,
+      "expected_unique_label_count": 24,
+      "packs": [
+        {
+          "filename": "pack_0000.tar",
+          "bytes": 2046126080,
+          "sha256": "0f568202f373e8fb866e558bd2a62c47a46ca763dd10c0381c1bb3e5dd61d081"
+        },
+        {
+          "filename": "pack_0001.tar",
+          "bytes": 2143856640,
+          "sha256": "1f9dc5c81f29405d707b1029170118223181624133cc99209ea3e92f116b1b5f"
+        },
+        {
+          "filename": "pack_0002.tar",
+          "bytes": 2143856640,
+          "sha256": "9aa55dbe630359e61665edde66e21c22d235be63e8e87380281809c662222d59"
+        },
+        {
+          "filename": "pack_0003.tar",
+          "bytes": 2143856640,
+          "sha256": "50a0aa1bf9b6ddd64a6be5865cd6d4e01ff90eefa3fd5c8fa74e8a6d7f95b378"
+        },
+        {
+          "filename": "pack_0004.tar",
+          "bytes": 2143856640,
+          "sha256": "dc8cf389f5221a847a0cb92af477f30a81f952815cff071dcbc5998833d23746"
+        },
+        {
+          "filename": "pack_0005.tar",
+          "bytes": 2143856640,
+          "sha256": "252cb5bf1528cfc8b22fdfaa977520b062e142875ad3b59096e8cb0d9f050b30"
+        },
+        {
+          "filename": "pack_0006.tar",
+          "bytes": 2143856640,
+          "sha256": "a45249aeecabc40b4671a760123a6c481df0538ce02ee8b9d5b06a81a91300e8"
+        },
+        {
+          "filename": "pack_0007.tar",
+          "bytes": 2143856640,
+          "sha256": "084802958af10272ec82e973d7fed814f4d278f7dc1999e93b4560080a5102e2"
+        },
+        {
+          "filename": "pack_0008.tar",
+          "bytes": 2143856640,
+          "sha256": "0a8ee72b9a3788a5aacce028fc03133e1f2963ac07cb19e2d37100d721f011bf"
+        },
+        {
+          "filename": "pack_0009.tar",
+          "bytes": 1777664000,
+          "sha256": "d3e6c8658326b7221745b4e356365c58ca31d5146a9849aa1c740cbbc2c59693"
+        }
+      ]
+    }
+  }
+}
