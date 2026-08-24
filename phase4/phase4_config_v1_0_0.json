@@ -1,0 +1,41 @@
+{
+  "phase_version": "1.0.0",
+  "profile_default": "pilot",
+  "full": {
+    "seeds": [42, 123, 2026],
+    "max_epochs": 40,
+    "minimum_epochs": 12,
+    "early_stopping_patience": 10,
+    "batch_size": 256,
+    "samples_per_tx": 4,
+    "eval_batch_size": 1024,
+    "embedding_dim": 128,
+    "num_classes": 98,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "temperature": 0.07,
+    "prototype_momentum": 0.95,
+    "dropout": 0.1,
+    "phase_rotation_radians": 0.12,
+    "amplitude_jitter": 0.05,
+    "awgn_std": 0.01,
+    "maximum_circular_shift": 4,
+    "require_t4": true
+  },
+  "arms": {
+    "A0": "CE",
+    "A1": "CE + 0.1 SupCon",
+    "A2": "CE + 0.1 Prototype",
+    "A3": "CE + 0.1 SupCon + 0.1 Prototype"
+  },
+  "partition_policy": {
+    "train_known": "gradient-bearing",
+    "p0_known": "model selection only",
+    "p1_cross_day": "known shift evaluation only",
+    "p2_cross_receiver": "known shift evaluation only",
+    "p3_cross_day_receiver": "known shift evaluation only",
+    "calibration_unknown": "threshold-free unknown diagnostic only, no gradients",
+    "strict_zero_day": "forbidden in Phase 4",
+    "strict_zero_day_shift": "forbidden in Phase 4"
+  }
+}
