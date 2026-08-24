@@ -10,6 +10,7 @@
   "phase4_version": "1.0.0",
   "preprocessing_dc_rms_native_length": "PASS",
   "python_syntax": "PASS",
+  "runner_modular_refactor": "PASS",
   "scientific_contract": {
     "arms_only_loss_coefficients_differ": true,
     "calibration_unknown": "diagnostic_only_no_gradients_no_model_selection",
@@ -39,7 +40,9 @@
     "model_and_losses.py": "f9c0c74a9e85e6a09c9c0f7b72e337756531c19e245e5d55c13fe3348a3f8416",
     "phase4_common.py": "e8e8915274ed1a2e30628d34f62d4245adc237fdcd38f67701414cfd614c2c31",
     "phase4_config_v1_0_0.json": "15b075ef15f9f46dd9a101f7d19417741b28cb9f899a18ad21221c7b6387f94a",
-    "prestudy_runner.py": "3429b257c7428dd774a99fddf1a3280c0a45a2300c8d3cfed32d2654c50f5500",
+    "prestudy_runner.py": "f1f090d2db5c06e2efc00e648db1555735d0acf705cf6054dcb3705b7731dd17",
+    "prestudy_runtime.py": "5879c0a98b3de1eccc55276f085104eb0cf7841df7a7c20b150ed79ebe23c351",
+    "prestudy_training.py": "54fb60e4f5694693e5f0834bb997c01a5964d9e494f945eb3eacbd01e454034f",
     "wisig_dataset.py": "15ea939d3ee78e185daa8689e9e81a046461df7304a1779130c130beea323b40"
   },
   "stage26_architecture_signature_exact": "PASS",
