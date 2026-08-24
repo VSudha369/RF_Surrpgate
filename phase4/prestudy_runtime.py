@@ -221,27 +221,36 @@ def make_loader(ds, batch_size: int, config: PreStudyConfig, shuffle: bool = Fal
     )
 
 
-def evaluate_known(model, ds, device, config) -> Dict[str, Any]:
+def collect_outputs(model, ds, device, config: PreStudyConfig, include_logits: bool = True):
     loader = make_loader(ds, config.eval_batch_size, config)
-    out = collect_outputs(model, loader, device)
-    return fixed_frame_metrics(out["logits"], out["labels"], 98)
-
-
-def collect_outputs(model, loader, device) -> Dict[str, np.ndarray]:
     model.eval()
-    emb, logits, labels, receiver, day, eq, gid = [], [], [], [], [], [], []
+    emb, logits, y, source, rx, day, eq, gid = [], [], [], [], [], [], [], []
     with torch.no_grad():
         for batch in loader:
             x = batch["x"].to(device, non_blocking=True)
-            o = model(x)
-            emb.append(o["embedding_normalized"].detach().cpu().numpy())
-            logits.append(o["logits"].detach().float().cpu().numpy())
-            labels.append(batch["y"].numpy())
-            receiver.append(batch["receiver"].numpy())
-            day.append(batch["day"].numpy())
+            with torch.autocast(device_type="cuda", dtype=torch.float16, enabled=config.amp_enabled):
+                out = model(x)
+            emb.append(out["embedding_normalized"].float().cpu().numpy())
+            if include_logits:
+                logits.append(out["logits"].float().cpu().numpy())
+            y.append(batch["y"].numpy())
+            source.append(batch["source_label"].numpy())
+            rx.append(batch["receiver"].numpy())
+            day.append(batch["capture_date"].numpy())
             eq.append(batch["equalization"].numpy())
             gid.append(batch["global_index"].numpy())
     return {
-        "embedding": np.concatenate(emb),"logits": np.concatenate(logits),"labels": np.concatenate(labels),
-        "receiver": np.concatenate(receiver),"day": np.concatenate(day),"equalization": np.concatenate(eq),"global_index": np.concatenate(gid),
+        "embedding": np.concatenate(emb),
+        "logits": np.concatenate(logits) if logits else None,
+        "y": np.concatenate(y),
+        "source_label": np.concatenate(source),
+        "receiver": np.concatenate(rx),
+        "capture_date": np.concatenate(day),
+        "equalization": np.concatenate(eq),
+        "global_index": np.concatenate(gid),
     }
+
+
+def evaluate_known(model, ds, device, config: PreStudyConfig) -> Dict[str, float]:
+    out = collect_outputs(model, ds, device, config, include_logits=True)
+    return fixed_frame_metrics(out["y"], out["logits"].argmax(axis=1), out["logits"], config.num_classes)
