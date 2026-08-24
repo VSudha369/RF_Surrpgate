@@ -1,0 +1,42 @@
+{
+  "phase4_version": "1.0.0",
+  "source_study": {
+    "repository": "VSudha369/Surrogate-XAI",
+    "branch": "codex/stage2-6m",
+    "final_head": "0a889e28f2634d4e3673d2e4332bcd8f36691bb1",
+    "source_script": "Stage2_6M_WiSig_ManyTx_Controlled_Representation_Ablation_v1_0_2.py",
+    "source_script_git_blob_sha": "8a33ead32b283f0f25c92ce19320d4f5c22f9d62",
+    "scientific_protocol_git_blob_sha": "93066fcf14ed96b31afba84ab59182384af9e548",
+    "scientific_role": "controlled teacher representation-objective pre-study"
+  },
+  "preserved_scientific_elements": {
+    "arms": ["A0 CE", "A1 CE+SupCon", "A2 CE+Prototype", "A3 CE+SupCon+Prototype"],
+    "auxiliary_weights": 0.1,
+    "supcon_temperature": 0.07,
+    "prototype_momentum": 0.95,
+    "embedding_dim": 128,
+    "known_classes": 98,
+    "seeds": [42, 123, 2026],
+    "max_epochs": 40,
+    "minimum_epochs": 12,
+    "early_stopping_patience": 10,
+    "batch_size": 256,
+    "samples_per_tx": 4,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "augmentation": {
+      "phase_rotation_radians": 0.12,
+      "amplitude_jitter": 0.05,
+      "awgn_std_relative_rms": 0.01,
+      "maximum_circular_shift": 4
+    }
+  },
+  "v2_authoritative_changes": {
+    "dataset": "Phase-1 native WiSig canonical shards [N,2,256], not old benchmark HDF5",
+    "preprocessing": "on-the-fly complex DC removal + RMS normalization; Phase-1 remains unmodified",
+    "partition_authority": "canonical Phase-3 run 20260824T100504Z",
+    "hot_io": "Phase-2 local /content staging only",
+    "strict_zero_day": "no Phase-4 resolver route; blocked unconditionally",
+    "claim_scope": "pre-study only; no final teacher/strict-XAI-surrogate-latency claims"
+  }
+}
