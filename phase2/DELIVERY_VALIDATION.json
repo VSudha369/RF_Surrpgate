@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "python_syntax": "PASS",
+  "notebook_parse": "PASS",
+  "synthetic_full_tar_extract_and_shard_verification": "PASS",
+  "real_phase1_transport_manifest_contract": "PASS",
+  "path_guard_under_content": "PASS",
+  "module_split_validation": "PASS",
+  "frozen_targets": {
+    "wisig": {
+      "run_id": "20260824T082742Z",
+      "n_samples": 1020643,
+      "seq_len": 256,
+      "n_shards": 127,
+      "n_packs": 1,
+      "source_sha256": "a8fc3e35134a240bfb4dab8862a6e482cef44de000b813d42417b853c47ccc7e"
+    },
+    "radioml2016": {
+      "run_id": "20260824T073604Z",
+      "n_samples": 220000,
+      "seq_len": 128,
+      "n_shards": 4,
+      "n_packs": 1,
+      "source_sha256": "b29ccc25b00d0718cd3b70ffa9158662ec83f6d9b63ffd845c7bcbe3b3096e8c"
+    },
+    "radioml2018": {
+      "run_id": "20260824T073812Z",
+      "n_samples": 2555904,
+      "seq_len": 1024,
+      "n_shards": 157,
+      "n_packs": 10,
+      "source_sha256": "e3dd0bef66a3426959ee66a1709a8c0a95d4f8395d18aaf6f1214bdbc763bd38"
+    }
+  },
+  "source_sha256": {
+    "stage_common.py": "e156c6be8ab77c40c4713485dbaa0e22f38fb92423a4892a28fba2ac0af1809d",
+    "stage_validation.py": "c26839e408aa34a9566807127fe88fdb181de09a5be7fdf89319319d5a4326de",
+    "stage_manager.py": "d6f26f17d5376733e2b061dd87c3b932d83a4c6199bb243c208ddd46f562bb3e",
+    "Phase2_Local_Stage_Manager_v1_0_0.py": "d7f9c77155d473f8576fb92f7ca1a6fc02bcbd500ea55f2d82b3ce3023036372",
+    "Phase2_Local_Stage_Manager_v1_0_0.ipynb": "4a811527b4be4ec0a63e5e97b78e3ba5d49f39a10f343167d16448606c80f900",
+    "frozen_phase1_registry_v1_0_0.json": "54814eeb4ac893da842acb11fdece6fe08465a7a9765124988d187a3f5d5121b",
+    "REAL_TARGET_VALIDATION.json": "c0b52575d9b7ee0f7f47bbb0de0b34a702f04908cb2198b5e63c8f8612bf1431",
+    "README.md": "e059a00c149e53722a2a2d6da301a34b547e008ad02ffc566d74ab9d81ad27d0"
+  }
+}
