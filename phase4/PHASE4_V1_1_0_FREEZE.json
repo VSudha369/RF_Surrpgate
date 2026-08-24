@@ -1,0 +1,51 @@
+{
+  "artifact_sha256": {
+    "PHASE4_BENCHMARK_COMPLETE.json": "6cc042fbc636665196efa9944a5bba7adfb479e9c0682bfcf7cdecd96386fdd0",
+    "PHASE4_BENCHMARK_SUMMARY.json": "920705a731b722d7cfc398e0f62a0224d97e34c045960b19b6738c55f06d1d53",
+    "STAGE_OUT_MANIFEST.json": "c8af8850a60a0f6d7767f7d31e2a1efa9a21b2de5b5de5d2fcc0368e6a7b731e",
+    "configs/CONFIG.json": "71402dec341478cf2cbb259932e3e71e6f8bd73553a5560150d4b7deb972a050",
+    "manifests/ACCESS_CONTRACT.json": "67d6f60a4ccb0e040520b78c7cc7b020eba5a975443fd0bf8451998322083a7b",
+    "manifests/STRICT_ACCESS_AUDIT.json": "6d2c1b5ab478e3210cad225aed6c8da1043c560133f0bf348dd6b059e327df97",
+    "metrics/LOCKED_SHIFT_EVALUATION.json": "fd08a3000e2bbe516a657b450e3c75815d56c8cb04ea10ec28ea257ab235fdae",
+    "metrics/OBJECTIVE_SELECTION_P0_ONLY.json": "31b838b3702d2298f7ed436d3dd29111da017cd72988f1c7281e3da5a741d817",
+    "metrics/POST_SELECTION_CALIBRATION_UNKNOWN.json": "997770aea7e2e4571c2b96560a3dba3e1becbcb5fc4f662ac3c6ec4f98a2eed8",
+    "reports/PHASE4_BENCHMARK_REPORT.md": "ad885f92103ef16f25828de618591a3ff2836f330af7ff3245f4b441a8d9e725"
+  },
+  "benchmark_config_sha256": "f59890d12c7962a101f84cfe8e0788ae9ec2f0f710b8878340322ec110e11e4c",
+  "benchmark_run_id": "benchmark_v1_1_0",
+  "claims_boundary": "Resource-bounded representation-objective benchmark only; no strict-zero-day, final-teacher, XAI-fidelity, statistical-superiority, or deployment claim.",
+  "drive_run_relative_path": "Surrogate_XAI_V2/04_PHASE4_WISIG_TEACHER_REPRESENTATION_BENCHMARK/run_benchmark_v1_1_0",
+  "freeze_status": "PHASE4_V1_1_0_FROZEN",
+  "freeze_utc": "2026-08-24T19:17:52Z",
+  "immutability_rule": "Do not reopen A0/A1 objective selection during Phase 5. Phase 5 may vary teacher architecture only; objective remains A0 Cross-Entropy.",
+  "phase": "PHASE4_WISIG_TEACHER_REPRESENTATION_BENCHMARK",
+  "phase3_run_id": "20260824T100504Z",
+  "phase4_benchmark_version": "1.1.0",
+  "selection_lock": {
+    "a0_mean_p0_fisher_ratio": 2.37740893153776,
+    "a0_mean_p0_fixed98_macro_f1": 0.30977958243302656,
+    "a1_mean_p0_fisher_ratio": 2.9435086199328597,
+    "a1_mean_p0_fixed98_macro_f1": 0.309184615671297,
+    "a1_minus_a0_mean": -0.0005949667617294688,
+    "a1_seed_wins": 1,
+    "decision": "RETAIN_A0_CE",
+    "phase5_representation_objective": "A0",
+    "practical_f1_delta": 0.002,
+    "selected_arm": "A0",
+    "selected_objective": "Cross-Entropy",
+    "selection_data": "P0 Known only",
+    "selection_locked_before_shift_or_unknown_resolution": true,
+    "statistical_claim": "Exploratory paired benchmark only; no significance claim from three seeds.",
+    "status": "LOCKED"
+  },
+  "source_code_commit": "0cc50b61d13cea359b3a94cdc36450a7fa7952f4",
+  "source_repository": "VSudha369/RF_Surrpgate",
+  "strict_access": {
+    "strict_access_blocked": true,
+    "strict_artifacts_found": [],
+    "strict_indices_loaded": false,
+    "strict_role_resolver_available": false,
+    "strict_signals_accessed": false
+  },
+  "wisig_source_sha256": "a8fc3e35134a240bfb4dab8862a6e482cef44de000b813d42417b853c47ccc7e"
+}

@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "architecture_registry_exact": "PASS",
+    "calibration_unknown_forbidden": "PASS",
+    "freeze_sha_matches_config": "PASS",
+    "full_complex_fft_present": "PASS",
+    "known_gradient_only": "PASS",
+    "legacy_65bin_slice_absent": "PASS",
+    "length_agnostic_output_contract": "PASS",
+    "native_l256": "PASS",
+    "objective_immutable_a0_ce": "PASS",
+    "p0_selection_only": "PASS",
+    "parameter_budget": "PASS",
+    "phase4_a0_locked": "PASS",
+    "phase4_ce_locked": "PASS",
+    "phase4_frozen": "PASS",
+    "python_ast_parse": "PASS",
+    "selection_lock_not_preopened": "PASS",
+    "shift_locked_before_eval": "PASS",
+    "strict_forbidden": "PASS"
+  },
+  "claims_boundary": "Known-only resource-bounded architecture screening. No Calibration Unknown, Strict Zero-Day, final-teacher, XAI-fidelity, or deployment claim.",
+  "config_sha256": "f9b79a91191f77799c003b9b9a5d17edcb1c8c89264d121d0ae4f5b41d16b5ba",
+  "overall": "PASS",
+  "parameter_counts": {
+    "F0_TIME_FREQ": 960738,
+    "R0_RESNET": 1361634,
+    "T0_TCN": 600098,
+    "X0_TRANSFORMER": 776162
+  },
+  "phase4_freeze_sha256": "02af60cdb7153aa78acc1a7d7e419c743ac905d40c8a85525b323d52868113f8",
+  "phase5_version": "1.0.0"
+}

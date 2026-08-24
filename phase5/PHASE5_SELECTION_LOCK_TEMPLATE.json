@@ -1,0 +1,9 @@
+{
+  "status": "NOT_LOCKED",
+  "phase": "PHASE5_WISIG_TEACHER_ARCHITECTURE_SCREENING",
+  "phase5_version": "1.0.0",
+  "selected_architecture": null,
+  "selection_metric": "P0 Known fixed-98 macro-F1",
+  "selection_data": "P0 Known only",
+  "shift_evaluation_authorized": false
+}

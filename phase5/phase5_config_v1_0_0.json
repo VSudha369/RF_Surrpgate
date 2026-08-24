@@ -1,0 +1,66 @@
+{
+  "phase": "PHASE5_WISIG_TEACHER_ARCHITECTURE_SCREENING",
+  "phase5_version": "1.0.0",
+  "phase4_freeze": {
+    "freeze_manifest": "../phase4/PHASE4_V1_1_0_FREEZE.json",
+    "freeze_manifest_sha256": "02af60cdb7153aa78acc1a7d7e419c743ac905d40c8a85525b323d52868113f8",
+    "required_status": "PHASE4_V1_1_0_FROZEN",
+    "required_selected_arm": "A0",
+    "required_objective": "Cross-Entropy"
+  },
+  "dataset": {
+    "name": "WiSig ManyTx",
+    "source_sha256": "a8fc3e35134a240bfb4dab8862a6e482cef44de000b813d42417b853c47ccc7e",
+    "phase3_run_id": "20260824T100504Z",
+    "native_sequence_length": 256,
+    "num_known_classes": 98
+  },
+  "access": {
+    "gradient_roles": ["train_known"],
+    "selection_roles": ["p0_known"],
+    "post_lock_known_evaluation_roles": ["p1_cross_day", "p2_cross_receiver", "p3_cross_day_receiver"],
+    "calibration_unknown_allowed": false,
+    "strict_roles_allowed": false
+  },
+  "objective": {
+    "arm": "A0",
+    "name": "Cross-Entropy",
+    "label_smoothing": 0.0
+  },
+  "architectures": ["R0_RESNET", "T0_TCN", "X0_TRANSFORMER", "F0_TIME_FREQ"],
+  "screening_budget": {
+    "seeds": [42, 123, 2026],
+    "maximum_epochs": 8,
+    "minimum_epochs": 4,
+    "early_stopping_patience": 2,
+    "batch_size": 256,
+    "samples_per_tx": 4,
+    "train_samples_per_known_tx": 600,
+    "p0_samples_per_known_tx": 150,
+    "shift_samples_per_present_tx": 150,
+    "eval_batch_size": 1024,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.1,
+    "amp_enabled": true,
+    "gradient_clip_norm": 5.0,
+    "phase_rotation_radians": 0.12,
+    "amplitude_jitter": 0.05,
+    "awgn_std": 0.01,
+    "maximum_circular_shift": 4
+  },
+  "selection": {
+    "selection_data": "P0 Known only",
+    "primary_metric": "mean_p0_fixed98_macro_f1_across_seeds",
+    "practical_equivalence_delta": 0.002,
+    "tiebreak_1": "higher_mean_p0_fisher_ratio",
+    "tiebreak_2": "lower_parameter_count",
+    "selection_must_lock_before_shift_evaluation": true,
+    "statistical_claim": "Exploratory three-seed architecture screen; no significance claim."
+  },
+  "parameter_budget": {
+    "minimum": 500000,
+    "maximum": 2000000
+  },
+  "claims_boundary": "Known-only resource-bounded architecture screening. No Calibration Unknown, Strict Zero-Day, final-teacher, XAI-fidelity, or deployment claim."
+}
