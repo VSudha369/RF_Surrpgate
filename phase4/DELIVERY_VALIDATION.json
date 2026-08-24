@@ -1,0 +1,50 @@
+{
+  "all_four_objectives_finite_gradient_test": "PASS",
+  "augmentation_determinism": "PASS",
+  "authorized_role_allowlist_exact": "PASS",
+  "expected_architecture_signature": "d5ed7528ab93246c784fe12ed1bee90d4234753293e89bdf3d226db8f2fb5f9c",
+  "expected_parameter_count": 849634,
+  "notebook_parse": "PASS",
+  "novelty_helper_chunked_test": "PASS",
+  "objective_selection_logic_test": "PASS",
+  "phase4_version": "1.0.0",
+  "preprocessing_dc_rms_native_length": "PASS",
+  "python_syntax": "PASS",
+  "scientific_contract": {
+    "arms_only_loss_coefficients_differ": true,
+    "calibration_unknown": "diagnostic_only_no_gradients_no_model_selection",
+    "gradient_role": [
+      "train_known"
+    ],
+    "known_model_selection_role": [
+      "p0_known"
+    ],
+    "known_shift_eval_roles": [
+      "p1_cross_day",
+      "p2_cross_receiver",
+      "p3_cross_day_receiver"
+    ],
+    "native_seq_len": 256,
+    "signals_rewritten": false,
+    "strict_zero_day": "unconditionally_forbidden_in_phase4"
+  },
+  "source_sha256": {
+    "PORT_PROVENANCE.json": "28cea900a4f1ab6128321b508ea846f3f0cb4ac7565ee4b16385847749153625",
+    "Phase4_WiSig_Teacher_Representation_PreStudy_v1_0_0.ipynb": "f4c314232e6275edf13f240673c84f23819d6e757fcc5b12b4cca9a2ace42d14",
+    "Phase4_WiSig_Teacher_Representation_PreStudy_v1_0_0.py": "0b061e0f1259b69babb11832ef4b97507b1147efba5b929325ff01fdf80ee375",
+    "README.md": "777d54871e919a6325efe55cea4286ec8a29154cf5c4ae1e06a819b295294e50",
+    "SCIENTIFIC_PROTOCOL.md": "a9d4af04e9b59031a57bbad9028d1a5a898e3b0043e5d99de36a2f0946229e12",
+    "access_guard.py": "f594fa86df1e42eacc249098766925e6fccaf6ee22b256a299f58a132e2fe198",
+    "evaluation.py": "f8504b9eeda16d58d3943d43003b133447d6c94acb040a53557cd2ba21f3f90c",
+    "model_and_losses.py": "f9c0c74a9e85e6a09c9c0f7b72e337756531c19e245e5d55c13fe3348a3f8416",
+    "phase4_common.py": "e8e8915274ed1a2e30628d34f62d4245adc237fdcd38f67701414cfd614c2c31",
+    "phase4_config_v1_0_0.json": "15b075ef15f9f46dd9a101f7d19417741b28cb9f899a18ad21221c7b6387f94a",
+    "prestudy_runner.py": "3429b257c7428dd774a99fddf1a3280c0a45a2300c8d3cfed32d2654c50f5500",
+    "wisig_dataset.py": "15ea939d3ee78e185daa8689e9e81a046461df7304a1779130c130beea323b40"
+  },
+  "stage26_architecture_signature_exact": "PASS",
+  "stage26_parameter_count_exact": "PASS",
+  "stage26_sampler_exact_port_determinism": "PASS",
+  "strict_index_filename_absent_from_runner": "PASS",
+  "strict_role_fail_closed_unit_test": "PASS"
+}
